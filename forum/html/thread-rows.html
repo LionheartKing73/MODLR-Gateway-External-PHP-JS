@@ -1,0 +1,37 @@
+
+<div class="mail-sender" style="margin-top: 5px;margin-bottom: -5px;border-bottom:0px;background-color: #FAFAFA;border: 1px solid #EFF2F7;padding: 5px;">
+	<div class="row">
+		<div class="col-md-8">
+			<p style='line-height: 30px;margin-bottom: 0;'>
+				<img src="{{ID:user_photo}}" style='width: 20px;' alt="{{ID:user_name}}" title="{{ID:user_name}}">
+				<strong>{{ID:user_name}}  {{ID:is_admin}} {{ID:user_badges}} </strong>
+			</p>
+		</div>
+		<div class="col-md-4">
+			<p class="date"> {{ID:date}}</p>
+		</div>
+	</div>
+</div>
+
+<div class="view-mail" style="border: 1px solid #EFF2F7;padding: 15px;overflow: auto;">
+	{{ID:question}}
+	{{ID:signature}}
+</div>
+
+{{ID:files}}
+
+
+<div class="compose-btn pull-left" style="padding: 5px;">
+	
+	
+</div>
+
+
+<div class="compose-btn pull-right" style="padding: 5px;">
+	<a {{ID:post_alert}} href="{{ID:base_url}}post.php?id={{ID:thread_id}}&page={{ID:page}}&type=reply">Reply</a> | <a {{ID:like_alert}} href="{{ID:base_url}}thread.php?id={{ID:thread_id}}&page={{ID:page}}&{{ID:like_or_un_get}}=1&post={{ID:id}}">{{ID:like_or_un}}</a> <span {{ID:edit_state}}>| <a href="{{ID:base_url}}post.php?id={{ID:id}}&page={{ID:page}}&type=edit">{{ST:edit}}</a> </span><span {{ID:delete_state}}>| <a onclick="return confirm('{{ST:are_you_sure_delete}}');" href="{{ID:base_url}}thread.php?id={{ID:thread_id}}&page={{ID:page}}&delete=1&post={{ID:id}}">{{ST:delete}}</a>  </span>| <a {{ID:flag_alert}} href="{{ID:base_url}}thread.php?id={{ID:thread_id}}&page={{ID:page}}&flag=1&post={{ID:id}}">{{ST:is_inappropriate}}</a>
+	<span class="label label-warning">{{ID:likes}} {{ST:likes}}</span>
+	<!-- <a href="mail_compose.html" class="btn btn-sm btn-primary" ><i class="fa fa-reply"></i> Reply</a>
+	<button class="btn btn-sm " ><i class="fa fa-arrow-right"></i> Forward</button>
+	<button class="btn  btn-sm tooltips" data-original-title="Print" type="button" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-print"></i> </button>
+	<button class="btn btn-sm tooltips" data-original-title="Trash" data-toggle="tooltip" data-placement="top" title=""><i class="fa fa-trash-o"></i></button> -->
+</div>

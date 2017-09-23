@@ -1,0 +1,173 @@
+/*!
+ * jQuery contextMenu - Plugin for simple contextMenu handling
+ *
+ * Version: git-master
+ *
+ * Authors: Rodney Rehm, Addy Osmani (patches for FF)
+ * Web: http://medialize.github.com/jQuery-contextMenu/
+ *
+ * Licensed under
+ *   MIT License http://www.opensource.org/licenses/mit-license
+ *   GPL v3 http://opensource.org/licenses/GPL-3.0
+ *
+ */
+
+.context-menu-list {
+    margin:0; 
+    padding:0;
+    
+    min-width: 120px;
+    max-width: 250px;
+    display: inline-block;
+    position: absolute;
+    list-style-type: none;
+    
+    border: 1px solid #DDD;
+    background: #EEE;
+    
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+       -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        -ms-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+         -o-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+.context-menu-item {
+    padding: 2px 2px 2px 24px;
+    background-color: #EEE;
+    position: relative;
+    -webkit-user-select: none;
+       -moz-user-select: -moz-none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+.context-menu-separator {
+    padding-bottom:0;
+    border-bottom: 1px solid #DDD;
+}
+
+.context-menu-item > label > input,
+.context-menu-item > label > textarea {
+    -webkit-user-select: text;
+       -moz-user-select: text;
+        -ms-user-select: text;
+            user-select: text;
+}
+
+.context-menu-item.hover {
+    cursor: pointer;
+    background-color: #39F;
+}
+
+.context-menu-item.disabled {
+    color: #666;
+}
+
+.context-menu-input.hover,
+.context-menu-item.disabled.hover {
+    cursor: default;
+    background-color: #EEE;
+}
+
+.context-menu-submenu:after {
+    content: ">";
+    color: #666;
+    position: absolute;
+    top: 0;
+    right: 3px;
+    z-index: 1;
+}
+
+/* icons
+    #protip:
+    In case you want to use sprites for icons (which I would suggest you do) have a look at
+    http://css-tricks.com/13224-pseudo-spriting/ to get an idea of how to implement 
+    .context-menu-item.icon:before {}
+ */
+.context-menu-item.contexticon { min-height: 18px; background-repeat: no-repeat; background-position: 4px 2px; }
+.context-menu-item.contexticon-edit { background-image: url(images/page_white_edit.png); }
+.context-menu-item.contexticon-cut { background-image: url(images/cut.png); }
+.context-menu-item.contexticon-copy { background-image: url(images/page_white_copy.png); }
+.context-menu-item.contexticon-paste { background-image: url(images/page_white_paste.png); }
+.context-menu-item.contexticon-delete { background-image: url(images/page_white_delete.png); }
+.context-menu-item.contexticon-add { background-image: url(images/page_white_add.png); }
+
+.context-menu-item.contexticon-quit { background-image: url(images/door.png); }
+
+
+.context-menu-item.contexticon-edit-set { background-image: url(/img/icons/16/block--pencil.png); }
+
+.context-menu-item.contexticon-table { background-image: url(/img/icons/16/table.png); }
+.context-menu-item.contexticon-manage-dimensions { background-image: url(/img/icons/16/manage-dimensions.png); }
+.context-menu-item.contexticon-formula { background-image: url(/img/icons/16/function.png); }
+
+.context-menu-item.contexticon-filter { background-image: url(/img/icons/16/funnel.png); }
+.context-menu-item.contexticon-lock { background-image: url(/img/icons/16/lock.png); }
+.context-menu-item.contexticon-lock-unlock { background-image: url(/img/icons/16/lock-unlock.png); }
+
+.context-menu-item.contexticon-formula-trace { background-image: url(/img/icons/16/question-balloon.png); }
+
+.context-menu-item.contexticon-save-as { background-image: url(/img/icons/16/disk--plus.png); }
+
+
+.context-menu-item.contexticon-column { background-image: url(/img/icons/16/column.png); }
+.context-menu-item.contexticon-row { background-image: url(/img/icons/16/row.png); }
+.context-menu-item.contexticon-remove-column { background-image: url(/img/icons/16/remove-column.png); }
+.context-menu-item.contexticon-remove-row { background-image: url(/img/icons/16/remove-row.png); }
+
+.context-menu-item.contexticon-column-width { background-image: url(/img/icons/16/table-select-column.png); }
+
+.context-menu-item.contexticon-open-four { background-image: url(/img/icons/16/ui-layered-pane.png); }
+.context-menu-item.contexticon-open-landscape { background-image: url(/img/icons/16/ui-split-panel.png); }
+.context-menu-item.contexticon-open-portrait { background-image: url(/img/icons/16/ui-split-panel-vertical.png); }
+.context-menu-item.contexticon-open-new-window { background-image: url(/img/icons/16/ui-panel.png); }
+
+
+
+/* vertically align inside labels */
+.context-menu-input > label > * { vertical-align: top; }
+
+/* position checkboxes and radios as icons */
+.context-menu-input > label > input[type="checkbox"],
+.context-menu-input > label > input[type="radio"] {
+    margin-left: -17px;
+}
+.context-menu-input > label > span {
+    margin-left: 5px;
+}
+
+.context-menu-input > label,
+.context-menu-input > label > input[type="text"],
+.context-menu-input > label > textarea,
+.context-menu-input > label > select {
+    display: block;
+    width: 100%;
+    
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+         -o-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.context-menu-input > label > textarea {
+    height: 100px;
+}
+.context-menu-item > .context-menu-list {
+    display: none;
+    /* re-positioned by js */
+    right: -5px;
+    top: 5px;
+}
+
+.context-menu-item.hover > .context-menu-list {
+    display: block;
+}
+
+.context-menu-accesskey {
+    text-decoration: underline;
+}

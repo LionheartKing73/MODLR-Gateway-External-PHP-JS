@@ -1,0 +1,98 @@
+<!-- profile.html:Start -->
+<h2>{{ID:title}}</h2>
+<br/>
+<div class="row-fluid">
+<div class="span12">
+{{ID:alert}}
+<form class="form-horizontal" method="post" action="{{ID:base_url}}profile.php" enctype="multipart/form-data">
+<fieldset>
+<legend>{{ST:change_your_details}}</legend>
+<span{{ID:facbook_profile_hide}}>
+<div class="control-group">
+<label class="control-label">{{ST:current_password}}</label>
+<div class="controls">
+<input type="password" class="input-xlarge" name="opassword" />
+<p class="help-block"></p>
+</div>
+</div>
+</span>
+<div class="control-group">
+<label class="control-label" for="name">{{ST:username}}</label>
+<div class="controls">
+<input type="text" class="input-xlarge" name="username" value="{{ID:username}}"/>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="name">{{ST:email}}</label>
+<div class="controls">
+<input type="text" class="input-xlarge" name="email" value="{{ID:email}}"/>
+<p class="help-block"></p>
+</div>
+</div>
+<span{{ID:facbook_profile_hide}}>
+<div class="control-group">
+<label class="control-label" for="name">{{ST:password}}</label>
+<div class="controls">
+<input type="password" class="input-xlarge" name="password" />
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="name">{{ST:repeat_password}}</label>
+<div class="controls">
+<input type="password" class="input-xlarge" name="cpassword" />
+<p class="help-block"></p>
+</div>
+</div>
+</span>
+<div class="control-group">
+<label class="control-label" for="name">{{ST:profile_photo}} (200x200)</label>
+<div class="controls">
+<input type="file" name="profile_photo"/>
+<p class="help-block">{{ID:current_profile}}</p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="name">{{ST:bio}}</label>
+<div class="controls">
+<textarea class="input-xxlarge" rows="4" name="bio">{{ID:bio}}</textarea>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="signature">{{ST:your_signature_text}}</label>
+<div class="controls">
+<textarea class="input-xxlarge" rows="4" name="signature">{{ID:signature}}</textarea>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="website_url">{{ST:website}}</label>
+<div class="controls">
+<input class="input-xlarge" type="text" name="website_url" value="{{ID:website_url}}"/>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="facebook_url">{{ST:facebook}}</label>
+<div class="controls">
+<input class="input-xlarge" type="text" name="facebook_url" value="{{ID:facebook_url}}"/>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="twitter_url">{{ST:twitter}}</label>
+<div class="controls">
+<input class="input-xlarge" type="text" name="twitter_url" value="{{ID:twitter_url}}"/>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="form-actions">
+<button type="submit" class="btn btn-info" name="submit" value="1">{{ST:save}}</button>
+</div>
+</fieldset>
+</form>
+</div>
+</div>
+<!-- profile.html:End -->

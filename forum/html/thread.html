@@ -1,0 +1,39 @@
+<div class="row-fluid">
+<div class="span12">
+<div class='pull-left'>
+	<h3 style="margin-bottom:10px;margin-top:0px;font-size:16px;"><b>Thread: {{ID:post_title}}</b></h3>
+</div>
+<div class='pull-right'>
+	<p style="text-align: right;margin-bottom:0px;margin-top:0px;font-size: 11px;"><a onclick="return confirm('{{ST:are_you_sure_delete}}');" class="btn btn-danger btn-xs" {{ID:delete_state}} href="{{ID:base_url}}thread.php?id={{ID:id}}&delete=1&post={{ID:id}}">{{ST:delete_thread}}</a> 
+	 <a class="btn btn-info btn-xs" {{ID:unlock_state}} href="{{ID:base_url}}thread.php?id={{ID:id}}&page={{ID:page}}&unlock=1">{{ST:unlock_thread}}</a>
+	 <a class="btn btn-info btn-xs" {{ID:lock_state}} href="{{ID:base_url}}thread.php?id={{ID:id}}&page={{ID:page}}&lock=1">{{ST:lock_thread}}</a>
+	 <a class="btn btn-info btn-xs" {{ID:unpin_state}} href="thread.php?id={{ID:id}}&page={{ID:page}}&unpin=1">{{ST:unpin_thread}}</a>
+	 <a class="btn btn-info btn-xs" {{ID:pin_state}} href="thread.php?id={{ID:id}}&page={{ID:page}}&pin=1">{{ST:pin_thread}}</a> 
+	 <a class="btn btn-info btn-xs" {{ID:unsubscribe_state}} href="{{ID:base_url}}thread.php?id={{ID:id}}&page={{ID:page}}&unsubscribe=1">{{ST:unsubscribe}}</a> 
+	 <a class="btn btn-info btn-xs" {{ID:subscribe_state}} href="{{ID:base_url}}thread.php?id={{ID:id}}&page={{ID:page}}&subscribe=1">{{ST:subscribe}}</a>
+	 <a class="btn btn-info btn-xs" {{ID:post_alert}} href="{{ID:base_url}}post.php?id={{ID:id}}&page={{ID:page}}&type=reply">{{ST:post_reply}}</a></p>
+ </div>
+</div>
+</div>
+{{ID:alert}}
+<br/>
+<div class="row-fluid">
+<div class="span12">
+<center>
+{{ID:pagination}}
+</center>       
+</div>
+</div>
+<div class="row-fluid">
+<div class="span12">
+{{ID:rows}}        
+</div>
+</div>
+
+<div class="row-fluid">
+<div class="span12">
+<center>
+{{ID:pagination}}
+</center>       
+</div>
+</div>

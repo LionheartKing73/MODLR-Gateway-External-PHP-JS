@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Just a Forum - User Guide</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<!-- Le styles -->
+<link href="css/default.css" rel="stylesheet">
+<link href="css/app.css" rel="stylesheet">
+
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+
+<div class="container">
+	<h1><a href="index.php">Just a Forum</a></h1>
+	<p>User driven knowledge base</p>
+	<ul class="breadcrumb">
+    <li class="active">User Guide</li>
+    </ul>
+	<div class="row">
+		
+		<!-- MainContent -->
+		<div class="span12">
+			<p>Created By: <b>Robert Nduati</b> , Email: <a href="mailto:robertnduati.karanja@gmail.com">robertnduati.karanja@gmail.com</a></p>
+			<br/>
+			<h2>About</h2>
+			<p>Just a Forum helps you set up a knowledge base for your users where they can share what they know about your products or site with each other. This script helps you quickly set up a forum that will help you save on the cost and time for support.</p>
+		<br/>
+		<h2>Features:</h2>
+		<ul>
+			<li>Quick one step installation</li>
+			<li>Easy to translate to any language since all the text is in one file. Plus it comes with support for a multi-lingual forum.</li>
+			<li>Easy to redesign since the HTML/CSS is separated from the PHP and is built using the twitter bootstrap</li>
+			<li>Sign Up with email verification to prevent spam</li>
+			<li>User profiles where they can upload their photos and Bios</li>
+			<li>Admin can ban users, delete and edit post and lock posts</li>
+			<li>Threads are categorized into forums</li>
+			<li>A badge system can be easily created.</li>
+			<li>Threads are categorized into forums</li>
+			<li>By making changes to just one file you can configure this script to use your user management system</li>
+		</ul>
+		<br/>
+		<h2>Installation:</h2>
+		<ol>
+		<li>Unzip the package</li>
+		<li>Open the file /php/config.php with a text editor and put in the details for your server</li>
+		<li>Navigate to the script install.php using your browser</li>
+		<li>A user account will be created for you. You can change the account later. For the first time sign in with the following credetials:<br/>
+		<b>Email:</b> The one you set for the webmaster in the file /php/config.php<br/>
+		<b>Password:</b> admin</li>
+		<li>Delete the files install.php, upgrade.php</li>
+		<li>Sign in and click on the <b>Admin</b> tab on the sidebar and the click on the Settings menu in that tab</li>
+		<li>Update the settings.</li>
+		<li>Click on the <b>Admin</b> tab on the sidebar and the click on the Manage Forums menu in that tab</li>
+		<li>Create at least one forum and you are good to go</li>
+		</ol>
+		
+		<br/>
+		<h2>Upgraging:</h2>
+		<p>If you are upgrading from a previous version:</p>
+		<ol>
+		<li>Unzip the package</li>
+		<li>Open the file /php/config.php with a text editor and put in the details for your server</li>
+		<li>Navigate to the script upgrade.php using your browser</li>
+		<li>Delete the files install.php, upgrade.php</li>
+		<li>Sign in and click on the <b>Admin</b> tab on the sidebar and the click on the settings menu in that tab</li>
+		<li>Update the settings.</li>
+		<li>And you are done</li>
+		</ol>
+		
+		<h2>What can the moderator do:</h2>
+		<p>The moderator can do everything the admin can when it comes to post (delete, lock, edit, and pin). The moderator can mute members so that they can not post until the admins decide to ban or reverse the mute.</p>
+		
+		<h2>Badges:</h2>
+		<p>There are two types of badges:</p>
+		<ol>
+		<li>Automatic: when these are created they are assigned to the users automitically. These related to lenght of membership and post counts</li>
+		<li>Manual: once these are created, the admin then needs to assign them to user on the page for editing users. These can be used for special recognition.</li>
+		</ol>
+		
+		<h2>Translating the script:</h2>
+		<p>To translate this script from English to any other language:</p>
+		<ol>
+		<li>Open the file /str/strings.xml using a text editor</li>
+		<li>You will find all the text that appears on all the page there. Simply translate them one by one</li>
+		</ol>
+		
+				
+		<h2>Multi-lingual forum:</h2>
+		<p>This is how you create a multi-lingual forum:</p>
+		<ol>
+		<li>Set line 73 in the file /php/config.php to <code>define('MULTI_LANG', true);</code></li>
+		<li>Set line 76 in the file /php/config.php to the default language to be used. Use the ISO code for the language. For example, if the default language is French it will be <code>define('PRIMARY_LANG', 'fr');</code></li>
+		<li>Set line 79 in the file /php/config.php with the other languages to be used separating them with commas. Use the ISO codes for the languages. For example, if the other languages are German and Spanish, it will be <code>define('OTHER_LANG', 'de,es');</code></li>
+		<li>Make copies of the file /str/strings.xml for each of the languages and name them like this strings_{ISO_Code}.xml. For example if the languages will include French, German and Spanish, the files will be named: strings_fr.xml, string_de.xml and strings_es.xml</li>
+		<li>Translate each of the new files and you are done.</li>
+		</ol>
+		
+		<h2>Redesign the script's look:</h2>
+		<p>All the HTML that is used in the script is in the folder "html" and the CSS is in the folder "css"</p>
+		<p>The most important file: are <b>/html/base.html</b>, <b>/css/default.html</b>, and <b>/str/strings.xml</b></p>
+		
+		<h2>Configure the script to use your user management system:</h2>
+		<p>Simply open the file /php/users_api.php with a text editor</p>
+		<p>For every function in there change it to draw information from your current system</p>
+		
+		</div><!--/span-->
+		
+
+	</div><!--/row-->
+	<hr>
+	<footer>
+		<p>&copy; Just a Forum 2012</p>
+	</footer>
+</div><!--/.fluid-container-->
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

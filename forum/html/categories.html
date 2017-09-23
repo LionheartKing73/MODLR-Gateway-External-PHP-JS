@@ -1,0 +1,40 @@
+<!-- categories.html:Start -->
+<h2>{{ID:title}}</h2>
+<br/>
+<div class="row-fluid">
+<div class="span12">
+{{ID:alert}}
+<form method="post" action="{{ID:base_url}}categories.php">
+<input type="text" class="input-xlarge" placeholder="{{ST:category_name}}" name="name" value="{{ID:name}}"/><br/>
+<input type="text" class="input-xlarge" placeholder="{{ST:description}}" name="description" value="{{ID:description}}"/><br/>
+	<select class="input-xlarge" name="parent" id="parent">
+	<option value="0" {{ID:selected_category_0}}>{{ST:select_parent_category}}</option>
+	{{ID:categories}}
+	</select><br/>
+<input type="text" class="input-xlarge" placeholder="{{ST:order}}" name="order_by" value="{{ID:order_by}}"/><br/>
+<input type="checkbox" value="1" name="locked"  {{ID:locked_state}}/> {{ST:lock_so_only_admin_can_post}}<br/>
+<br/>
+<button type="submit" class="btn btn-info" name="submit">{{ST:add_new_category}}</button>
+<button class="btn" type="reset">{{ST:reset}}</button>
+</form>
+</div>
+</div>
+
+<div class="row-fluid">
+<div class="span12">
+<table class="table table-bordered">
+<thead>
+<tr>
+<th>{{ST:name}}</th>
+<th>{{ST:order}}</th>
+<th>{{ST:threads}}</th>
+</tr>
+</thead>
+<tbody>
+{{ID:rows}}
+</tbody>
+</table>
+{{ID:pagination}}
+</div>
+</div>
+<!-- categories.html:End -->

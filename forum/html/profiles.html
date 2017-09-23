@@ -1,0 +1,40 @@
+<!-- profile.html:Start -->
+<h2>{{ID:username}}</h2>
+<br/>
+{{ID:alert}}
+<div class="row-fluid">
+<div class="span4">
+<img width="200" height="200" src="{{ID:photo}}">
+{{ID:delete_photo}}
+</div>
+<div class="span7 mi_box">
+<p style="text-align: right;{{ID:mute_unmute_state}}"><a onclick="return confirm('{{ST:are_you_sure}}');" class="btn btn-info" {{ID:unmute_state}} href="{{ID:this_url}}&unmute=1">{{ST:unmute_user}}</a>
+ <a onclick="return confirm('{{ST:are_you_sure}}');" class="btn btn-info" {{ID:mute_state}} href="{{ID:this_url}}&mute=1">{{ST:mute_user}}</a> </p>
+<p><b>Bio:</b><br/>
+{{ID:bio}}</p>
+<p><b>Threads started:</b><br/>
+{{ID:threads_started}}</p>
+<p><b>Total posts:</b><br/>
+{{ID:total_posts}}</p>
+<p><b>{{ST:badges}}:</b><br/>
+{{ID:user_badges}}</p>
+<p><b>{{ST:links}}:</b><br/>
+<img src="{{ID:base_url}}img/facebook.png"> {{ID:facebook_url}}<br/>
+<img src="{{ID:base_url}}img/twitter_1.png"> {{ID:twitter_url}}<br/>
+<img src="{{ID:base_url}}img/world.png"> {{ID:website_url}}</p>
+<hr/>
+<form method="post" action="{{ID:this_url}}">
+{{ID:alert2}}
+<h4>{{ST:send_private_message}}</h4>
+<br/>
+<p><textarea name="message" id="message" class="span5" rows="10">{{ID:message}}</textarea><p>
+<script type="text/javascript">
+bkLib.onDomLoaded(function() {
+	new nicEditor({fullPanel : true, iconsPath : '{{ID:base_url}}js/nicEdit/nicEditorIcons.gif'}).panelInstance('message');
+});
+</script>
+<p><input type="submit" name="send" value="{{ST:send}}" class="btn btn-info"/>
+</form>
+</div>
+</div>
+<!-- profile.html:End -->

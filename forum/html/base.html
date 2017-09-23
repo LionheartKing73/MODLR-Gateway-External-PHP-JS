@@ -1,0 +1,126 @@
+
+<title>MODLR » Community Forum » {{ID:title}}</title>
+<!-- Le styles -->
+<!-- <link href="{{ID:base_url}}css/{{ID:theme}}" rel="stylesheet"> -->
+<link href="{{ID:base_url}}css/app.css" rel="stylesheet">
+
+<script src="{{ID:base_url}}js/jquery.min.js"></script>
+<script src="{{ID:base_url}}js/bootstrap.min.js"></script>
+<script src="{{ID:base_url}}js/jquery.placeholder.min.js"></script>
+<script src="{{ID:base_url}}js/jquery.tmpl.js"></script>
+<link href="{{ID:base_url}}js/uploader-styler/style.css" rel="stylesheet">
+<script src="{{ID:base_url}}js/uploader-styler/javascript.js"></script>
+<script>
+function SignInAlert(){
+	var something = alert('{{ST:you_need_to_signin_first}}');
+	return false;
+}
+function LockedAlert(){
+	var something = alert('{{ST:this_thread_is_locked}}');
+	return false;
+}
+
+function CantLikeTwiceAlert(){
+	var something = alert('{{ST:you_cant_like_a_post_more_than_once}}');
+	return false;
+}
+</script>
+<script type="text/javascript" src="{{ID:base_url}}js/nicEdit/nicEdit.js"></script>
+{{ID:facebook_script}}
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<!-- <div class="container"> -->
+	<!-- <h1><a href="{{ID:base_url}}">{{ST:app_name}}</a></h1>
+	<p>{{ST:app_sub_heading}}</p> -->
+	<ul class="breadcrumbs-alt">
+		{{ID:breadcrumbs}}
+	</ul>
+	
+		<!-- MainContent -->
+		
+        <div class="row">
+		
+		
+			<div class="col-md-12">
+				<div class="panel">
+					<div class="panel-heading">
+					  {{ID:title}}
+					  <span class="tools pull-right">
+							<a class="fa fa-chevron-down" href="javascript:;"></a>
+						</span>
+					</div>
+					<div class="panel-body">
+					
+			{{ID:content}}
+		
+					</div>
+				</div>
+			</div>
+
+		<!--/span-->
+		<!-- /MainContent -->
+		
+		<!-- Sidebar -->
+		<!--
+		
+		<div class="col-md-3">
+			<div class="panel">
+				<div class="panel-heading">
+				  Write a Post
+				  <span class="tools pull-right">
+						<a class="fa fa-chevron-down" href="javascript:;"></a>
+					</span>
+				</div>
+				<div class="panel-body">
+		
+		<div class="span3">
+			<form class="well form-search" method="post" action="{{ID:base_url}}search.php">
+				<input type="text" style="width: 95%" placeholder="{{ST:search}}" name="q">
+			</form>
+			
+			<ul class="nav nav-tabs" id="myTab">
+				<li class="active"><a href="#home" data-toggle="tab">{{ST:menu}}</a></li>
+				<li><a href="#forums_tab" data-toggle="tab">{{ST:forum_categories}}</a></li>
+				{{ID:admin_tab}}
+			</ul>
+ 
+			<div id="myTabContent" class="tab-content">
+				<div class="tab-pane active" id="home"  style="border: 1px solid #CCC;padding:0px;">
+					<div class="well panel" style="margin-bottom:0px;padding-top:0px;padding-bottom:0px;">
+						<ul class="nav nav-pills nav-stacked mail-nav" style="margin-top:0px;">
+						{{ID:sidebar}}
+						</ul>
+					</div>
+				</div>
+				<div class="tab-pane" id="forums_tab" style="border: 1px solid #CCC;padding:0px;">
+					<div class="well panel" style="margin-bottom:0px;padding-top:0px;padding-bottom:0px;">
+						
+						
+						
+						<ul class="nav nav-pills nav-stacked mail-nav" style="margin-top:0px;">
+                            {{ID:sidebar_forums}}
+                        </ul>
+						
+						
+					</div>
+				</div>
+				{{ID:admin_tab_content}}
+			</div>	
+		
+		</div>
+		
+			
+			
+			{{ID:language_form}}
+		</div>
+		-->
+		<!-- /Sidebar -->
+		
+				</div>
+			</div>
+		</div>
+
+<!-- </div>-- ><!--/.fluid-container-->

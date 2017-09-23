@@ -1,0 +1,80 @@
+<!-- category.html:Start -->
+
+<br/>
+<div class="row-fluid">
+<div class="span12">
+{{ID:alert}}
+<div {{ID:the_form}}>
+<form class="form-horizontal" method="post" action="{{ID:base_url}}post.php?type={{ID:type}}{{ID:id_query}}"  enctype="multipart/form-data">
+
+<div class="form-group ">
+	<label for="title" class="control-label col-lg-3">Thread Title</label>
+	<div class="col-lg-6">
+		<input class=" form-control" id="title" name="title" type="text" value="{{ID:title_post}}" placeholder="{{ST:title}}">
+	</div>
+</div>
+
+<div class="form-group ">
+	<label for="category" class="control-label col-lg-3">Thread Forum</label>
+	<div class="col-lg-6">
+		<select name="category" class="input-xxlarge form-control">
+			<option value="">{{ST:select_a_category}}</option>
+			{{ID:categories}}
+		</select>
+	</div>
+</div>
+
+
+<!--<span {{ID:show_title}}><input style="font-size: 14px; font-weight:bold;" type="text" class="input-xxlarge" name="title" value="{{ID:title_post}}" placeholder="{{ST:title}}"/>
+<br/>-->
+<!--
+<br/></span>
+<span {{ID:show_categories}}><select name="category" class="input-xxlarge">
+<option value="">{{ST:select_a_category}}</option>
+{{ID:categories}}
+</select>
+<br/>
+<br/></span>-->
+
+<textarea class="span9" rows="12" name="body" id="body" style="width:100%;">{{ID:body}}</textarea>
+<script type="text/javascript">
+bkLib.onDomLoaded(function() {
+	new nicEditor({fullPanel : true, iconsPath : '{{ID:base_url}}js/nicEdit/nicEditorIcons.gif'}).panelInstance('body');
+});
+</script>
+
+<div class="form-group">
+	<label class="control-label col-md-3">Attach Files:</label>
+	<div class="col-md-4" style='top: 8px;'>
+		<input type="file" class="default" id="photos[]" name="photos[]" multiple/>
+	</div>
+</div>
+
+<!--
+<div class="input-group"{{ID:file_upload}}>
+<input type="text" class="form-control" readonly placeholder="Select files to attach">
+<span class="input-group-btn">
+<span class="btn btn-file">
+<i class="icon-picture"></i> <input type="file" id="photos[]" name="photos[]" multiple>
+</span>
+</span>
+</div>
+-->
+
+{{ID:files}}
+<br/>
+<span  {{ID:show_subscribe}}><label for="email_notification"><input type="checkbox" value="1" id="email_notification" name="email_notification"  {{ID:email_notification_state}}/> {{ST:subscribe_to_email_notification}}</label>
+<br/></span>
+<div>
+{{ID:captcha_html}}
+</div>
+<input type="hidden" name="quote" value="{{ID:quote}}"/>
+<button type="submit" class="btn btn-info pull-right" name="submit" value="1">{{ST:submit}}</button>
+</form>
+</div>
+</div>
+</div>
+<!-- category.html:End -->
+
+
+

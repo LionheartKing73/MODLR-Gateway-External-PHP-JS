@@ -1,0 +1,17 @@
+<script type="text/javascript" src="{{ID:base_url}}js/oauthpopup.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+    $('#facebook_signin').click(function(e){
+        $.oauthpopup({
+            path: '{{ID:base_url}}facebook_login.php',
+			width:600,
+			height:300,
+            callback: function(){
+                window.location.reload();
+            }
+        });
+		e.preventDefault();
+    });
+});
+
+</script>

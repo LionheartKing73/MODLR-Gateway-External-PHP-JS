@@ -1,0 +1,121 @@
+
+*** September 15, 2012
+
+1. Added the themes from http://bootswatch.com/
+2. Added the option of having a classic forum home page
+3. Added the option of having human friendly URLs for forums and threads
+4. Added tinyMCE
+5. Modified session variable name to allow for multiple instances of the forum on a server
+6. Ehanced protection of forms from XSS attacks
+
+*** October 10, 2012
+
+1. Added a profile link to the sidebar to avoid confusion
+2. Added the option for admin to have to approval all posts before they are displayed.
+3. Made it possible for setting up of a multi-lingual forum
+4. Fixed bug with the remember me feature of signing in
+5. Allowed users to unlike a post after they have liked it
+
+*** November 5, 2012 - Version 2.0
+
+1. Added achievements
+2. Added the moderator role
+3. Allowed for threads to be pinned to the top of the list
+4. Allowed the admin to manually order the forums
+5. Allowed replying with quotes
+6. Added a personal message system
+
+*** January 21, 2013 - Version 2.1
+
+1. Added facebook connect
+2. Minor bug fix on threads page
+3. Added captcha to the post form
+
+Files that changed:
+
+-php/config.php
+-php/facebook/
+-php/users_api.php
+-php/recaptchalib.php
+-php/functions.php
+-includes.php
+-posts.php
+-thread.php
+-facebook_login.php
+-profile.php
+-db_install.php
+-html/posts.html
+-html/recaptcha.html
+-html/sidebar-signout.html
+-html/base.html
+-html/facebook_script.html
+-html/profile.html
+-str/strings.xml
+-img/glyphicons/glyphicons_320_facebook.png
+
+*** January 30, 2013 - Version 2.1.1
+
+1. Fixed a bug with facebook connect
+
+Files that changed:
+
+-facebook_login.php
+-html/facebook_script.html
+
+
+*** March 21, 2013 - Version 3
+
+1. Admin and moderators don't have to input captcha when creating a post
+2. Improved slug function for SEF urls
+3. Allowed the editing of titles and categories
+4. Made so that when quoting, users cant change words of original author
+5. Added who is online feature
+6. Added tabs to the sidebar to make it shorter
+7. Fixed bug with pin image not showing in search results
+8. Changed from tinyMCE to nicEdit
+9. Added website, facebook, and twitter urls to the uer profiles
+10. Allowed the creation of categories that only admin and moderators can start threads in.
+11. Allowed admin to be notified when a post if flagged, new thread is created, or new user signs up
+12. Added meta descriptions for search engines
+13. Added support for sub-forums
+14. Moved most of the settings from the config file to a page for the admins
+
+
+Files changed:
+-php/functions.php
+-post.php
+-db_install.php
+-html/post.html
+-thread.php
+-online.php
+-html/online.html
+-html/online-rows.html
+-functions.php
+-php/user_api.php
+-html/base.html
+-str/strings.xml [from line 408]
+-html/sidebar-signin.html
+-html/sidebar-moderator.html
+-html/sidebar-admin.html
+-search.php
+-js/nicEdit/
+-html/messages-form.html
+-html/profiles.html
+-profiles.php
+-profile.php
+-html/profile.html
+-category.php
+-categories.php
+-html/category.html
+-html/categories.html
+-verify.php
+-php/config.php
+-index.php
+-html/home.html
+-html/home-subs.html
+-includes.php
+-install.php
+-upgrade.php
+-html/settings.html
+-settings.php
+

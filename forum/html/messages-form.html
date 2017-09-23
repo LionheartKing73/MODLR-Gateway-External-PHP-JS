@@ -1,0 +1,8 @@
+<form method="post" action="{{ID:base_url}}messages.php?contact={{ID:id}}">
+<p><textarea name="message" id="message" class="span9" rows="10">{{ID:message}}</textarea><p>
+<script type="text/javascript">
+bkLib.onDomLoaded(function() {
+	new nicEditor({fullPanel : true, iconsPath : '{{ID:base_url}}js/nicEdit/nicEditorIcons.gif'}).panelInstance('message');
+});
+</script>
+<p><input type="submit" name="send" value="{{ST:send}}" class="btn btn-info"/>

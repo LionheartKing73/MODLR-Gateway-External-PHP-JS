@@ -1,0 +1,18 @@
+<div class="mi_box">
+	<div class="row-fluid">
+		<div class="span2">
+			<p><a href="{{ID:path_to_profile}}"><img width="80px" height="80px" src="{{ID:user_photo}}" title="{{ID:user_name}}"></a></p>
+			{{ID:is_admin}}
+		</div>
+		<div class="span10">
+			<h4 style="float: left;">{{ID:user_name}}</h4>
+			<p style="float: right;">{{ID:date}} | <a href="{{ID:base_url}}approve.php?id={{ID:id}}&page={{ID:page}}&approve=1">{{ST:approve}}</a> | <a onclick="return confirm('{{ST:are_you_sure_delete}}');" href="{{ID:base_url}}approve.php?id={{ID:id}}&page={{ID:page}}&delete=1">{{ST:delete}}</a></p>
+			<div style="clear: both;"></div>
+			<h2>{{ID:title}}</h2>
+			<br/>
+			<div>{{ID:post}}</div>
+			{{ID:files}}
+			<p></p>
+		</div>
+	</div>
+</div>

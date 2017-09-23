@@ -1,0 +1,62 @@
+<div class="row-fluid">
+<div class="span12">
+<h1>{{ID:title}}</h1>
+<br/>
+{{ID:alert}}
+<form class="form-horizontal" method="post" action="{{ID:base_url}}user_new.php">
+<fieldset>
+<div class="control-group">
+<label class="control-label">{{ST:username}}</label>
+<div class="controls">
+<input type="text" class="input-xlarge" name="username" value="{{ID:username}}"/>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="desrciption">{{ST:select_role}}</label>
+<div class="controls">
+<select class="input-xlarge" name="role" id="role">
+<option {{ID:user_selected}} value="user">{{ST:basic_user}}</option>
+<option {{ID:moderator_selected}} value="moderator">{{ST:moderator}}</option>
+<option {{ID:admin_selected}} value="admin">{{ST:administrator}}</option>
+</select>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label">{{ST:email}}</label>
+<div class="controls">
+<input type="text" class="input-xlarge" name="email" value="{{ID:email}}"/>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="input01">{{ST:password}}</label>
+<div class="controls">
+<input type="password" class="input-xlarge" name="password"/>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="input01">{{ST:repeat_password}}</label>
+<div class="controls">
+<input type="password" class="input-xlarge" name="cpassword"/>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label"></label>
+<div class="controls">
+<label class="checkbox inline">
+<input type="checkbox" value="1" name="email_password"  {{ID:email_password_state}}/> {{ST:email_password_to_the_user}}
+</label>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="form-actions">
+<button type="submit" class="btn btn-info" name="submit" value="1">{{ST:submit}}</button>
+</div>
+</fieldset>
+</form>
+</div>
+</div>

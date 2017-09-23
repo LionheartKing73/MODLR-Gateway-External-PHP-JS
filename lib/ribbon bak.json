@@ -1,0 +1,288 @@
+{
+    "ribbon": {
+        "fileTabMenu": {
+            "label": "File",
+            "commands": [
+                "save",
+                "save-as",
+                "close"
+            ]
+        },
+        "tabs": [{
+            "name": "Home",
+            "groups": [{
+                "width": 162,
+                "name": "Clipboard",
+                "tools": [{
+                        "type": "split-button",
+                        "commands": [
+                            "paste",
+                            "paste-special",
+                            "paste-from-word",
+                            "paste-as-hyperlink",
+                            "paste-plain"
+                        ]
+                    },{
+                        "type": "toolbar",
+                        "behavior": "normal",
+                        "commands": [
+                            "cut",
+                            "copy",
+                            "paste"
+                        ]
+                    },{
+                        "type": "toolbar",
+                        "showText": true,
+                        "behavior": "normal",
+                        "commands": [
+                            "format-painter"
+                        ]
+                    }]
+            },{
+                "width": 282,
+                "name": "Font",
+                "tools": [{
+                    "type": "dropdown-menu",
+                    "name": "font-face",
+                    "width": 134,
+                    "commands": [
+                        "Arial",
+                        "Comic Sans MS",
+                        "Consolas",
+                        "Cambria",
+                        "Arial Black",
+                        "Courier",
+                        "Courier New",
+                        "Garamond",
+                        "Georgia",
+                        "Segoe UI",
+                        "Segoe UI, Light",
+                        "Segoe UI Semibold",
+                        "Segoe UI Symbol",
+                        "Sans-Serif",
+                        "Serif",
+                        "Times New Roman",
+                        "Trebuchet MS",
+                        "Verdana",
+                        "Arial Rounded MT",
+                        "Nueva Roman",
+                        "Helvetica",
+                        "Calibri",
+                        "Lucida Console",
+                        "Calibri Light",
+                        "Century Gothic",
+                        "Impact"
+                    ]
+                },{
+                    "type": "dropdown-menu",
+                    "name": "font-size",
+                    "width": 41,
+                    "commands": [
+                        "8",
+                        "9",
+                        "10",
+                        "11",
+                        "12",
+                        "14",
+                        "16",
+                        "18",
+                        "20",
+                        "22",
+                        "24",
+                        "26",
+                        "28",
+                        "30",
+                        "36",
+                        "48"
+                    ]
+                },{
+                    "type": "toolbar",
+                    "behavior": "normal",
+                    "commands": [
+                        "increase-font",
+                        "decrease-font"
+                    ]
+                },{
+                    "type": "toolbar",
+                    "behavior": "normal",
+                    "commands": [
+                        "clear-formatting"
+                    ]
+                },{
+                    "type": "toolbar",
+                    "behavior": "toggle",
+                    "commands": [
+                        "bold",
+                        "italic",
+                        "underline"
+                     ]
+                },{
+                    "type": "toolbar",
+                    "behavior": "normal",
+                    "commands": [
+                        "text-color",
+                        "back-color"
+                    ]
+                },{
+                    "type": "toolbar",
+                    "behavior": "exclusive",
+                    "commands": [
+                        "align-left",
+                        "align-center",
+                        "align-right"
+                    ]
+                }]
+            },{
+                "width": "180",
+                "name": "Report Table",
+                "tools": [
+                
+                {
+                    "type": "toolbar",
+                    "behavior": "exclusive",
+                    "commands": [
+                        "row-before-cursor",
+                        "column-before-cursor",
+                        "row-at-end",
+                        "column-at-end",
+                        "remove-row",
+                        "remove-column"
+                    ]
+                }
+                
+                ]
+            },{
+                "width": "80",
+                "name": "Report Format",
+                "tools": [{
+					"type": "toolbar",
+					"showText": true,
+					"behavior": "normal",
+					"commands": [
+						"manage-dimensions",
+						"manage-time-series"
+						
+					]
+				}]
+            },{
+                "width": "auto",
+                "name": "Misc",
+                "tools": [{
+					"type": "toolbar",
+					"showText": true,
+					"behavior": "normal",
+					"commands": [
+						
+						
+					]
+				}]
+            }]
+        },{
+            "name": "Titles",
+            "groups": [{
+                "width": "80",
+                "name": "Titles",
+                "tools": [{
+					"type": "toolbar",
+					"showText": true,
+					"behavior": "normal",
+					"commands": [
+						"configure-title"
+						
+					]
+				}]
+            },{
+                "width": "auto",
+                "name": "Misc",
+                "tools": [{
+					"type": "toolbar",
+					"showText": true,
+					"behavior": "normal",
+					"commands": [
+						
+						
+					]
+				}]
+            }]
+        },{
+            "name": "Headings",
+            "groups": [{
+                "width": "260",
+                "name": "Sets",
+                "tools": [{
+					"type": "toolbar",
+					"showText": true,
+					"behavior": "normal",
+					"commands": [
+						"single-element-set"
+						
+					]
+				},{
+					"type": "toolbar",
+					"showText": true,
+					"behavior": "normal",
+					"commands": [
+                        "set-editor"
+					]
+				},{
+					"type": "toolbar",
+					"showText": true,
+					"behavior": "normal",
+					"commands": [
+                        "remove-set"
+					]
+				}]
+            },{
+                "width": "80",
+                "name": "Dimensionality",
+                "tools": [{
+					"type": "toolbar",
+					"showText": true,
+					"behavior": "normal",
+					"commands": [
+						"dimension-editor"
+					]
+				}]
+            },{
+                "width": "80",
+                "name": "Formatting",
+                "tools": [{
+					"type": "toolbar",
+					"showText": true,
+					"behavior": "toggle",
+					"commands": [
+						"show-hidden-headers",
+						"hide-header"
+					]
+				}]
+            },{
+                "width": "auto",
+                "name": "Misc",
+                "tools": [{
+					"type": "toolbar",
+					"showText": true,
+					"behavior": "normal",
+					"commands": [
+						
+						
+					]
+				}]
+            }]
+        },{
+            "name": "Formulas",
+            "groups": [{
+                "name": "Themes",
+                "tools": []
+            },{
+                "name": "Page Setup",
+                "tools": []
+            },{
+                "name": "Page Background",
+                "tools": []
+            },{
+                "name": "Arrange",
+                "tools": []
+            }]
+        }]
+    }
+}

@@ -1,0 +1,66 @@
+<!-- admin.html:Start -->
+<h2>{{ST:edit_user}}</h2>
+<br/>
+<div class="row-fluid">
+<div class="span12">
+{{ID:alert}}
+<form class="form-horizontal" method="post" action="{{ID:base_url}}user.php?id={{ID:id}}">
+<div class="control-group">
+<label class="control-label" for="name">{{ST:username}}</label>
+<div class="controls">
+<input type="text" class="input-xlarge" name="username" value="{{ID:username}}"/>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="name">{{ST:email}}</label>
+<div class="controls">
+<input type="text" class="input-xlarge" name="email" value="{{ID:email}}"/>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="desrciption">{{ST:select_role}}</label>
+<div class="controls">
+<select class="input-xlarge" name="role" id="role">
+<option {{ID:user_selected}} value="user">{{ST:basic_user}}</option>
+<option {{ID:moderator_selected}} value="moderator">{{ST:moderator}}</option>
+<option {{ID:admin_selected}} value="admin">{{ST:administrator}}</option>
+</select>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="desrciption">{{ST:assign_achievements}}</label>
+<div class="controls">
+<div class="span4 scroll_checkboxes">
+{{ID:achievements}}
+</div>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label"></label>
+<div class="controls">
+<label class="checkbox inline">
+<input type="checkbox" value="1" name="deny_access"  {{ID:deny_access_state}}/> {{ST:deny_access}}
+</label>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group" {{ID:mute_state}}>
+<label class="control-label"></label>
+<div class="controls">
+<label class="checkbox inline">
+<input type="checkbox" value="1" name="unmute"  {{ID:unmute_state}}/> {{ST:unmute_user}}
+</label>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="form-actions">
+<button type="submit" class="btn btn-info" name="submit" value="1">{{ST:save}}</button>
+<button onclick="return confirm('{{ST:are_you_sure_delete}}');" type="submit" class="btn btn-danger" name="delete" value="1">{{ST:delete}}</button>
+</div>
+</form>
+</div>
+</div>
+<!-- admin.html:End -->

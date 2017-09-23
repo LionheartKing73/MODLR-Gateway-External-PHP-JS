@@ -1,0 +1,88 @@
+<!-- category.html:Start -->
+<h2>{{ST:edit_forum}}</h2>
+<br/>
+<div class="row">
+<div class="span9">
+{{ID:alert}}
+<form class="form-horizontal" method="post" action="{{ID:base_url}}category.php?id={{ID:id}}">
+<fieldset>
+<div class="control-group">
+<label class="control-label" for="name">{{ST:name}}</label>
+<div class="controls">
+<input type="text" class="input-xlarge" name="name" value="{{ID:name}}"/>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="name">{{ST:description}}</label>
+<div class="controls">
+<input type="text" class="input-xlarge" name="description" value="{{ID:description}}"/>
+<p class="help-block"></p>
+</div>
+</div>
+
+<div class="control-group">
+<label class="control-label" for="name">{{ST:parent_category}}</label>
+<div class="controls">
+<select class="input-xlarge" name="parent" id="parent">
+	<option value="0" {{ID:selected_category_0}}>{{ST:none}}</option>
+	{{ID:categories}}
+</select>
+<p class="help-block"></p>
+</div>
+</div>
+
+<div class="control-group">
+<label class="control-label" for="name">{{ST:order}}</label>
+<div class="controls">
+<input type="text" class="input-xlarge" name="order_by" value="{{ID:order_by}}"/>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label"></label>
+<div class="controls">
+<label class="checkbox inline">
+<input type="checkbox" value="1" name="locked"  {{ID:locked_state}}/> {{ST:lock_so_only_admin_can_post}}
+</label>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="form-actions">
+<button type="submit" class="btn btn-info" name="submit" value="1">{{ST:save}}</button>
+<a class="btn btn-danger" href="#myModalSingle" data-toggle="modal">{{ST:delete}}</a>
+</div>
+</fieldset>
+</form>
+</div>
+</div>
+<div id="myModalSingle" class="modal hide fade">
+	<div class="modal-header">
+		<a class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+		<h3>{{ST:delete_category}}</h3>
+	</div>
+	<div class="modal-body">
+		<form class="form-horizontal" action="{{ID:base_url}}category.php?id={{ID:id}}" method="get">
+			<input type="hidden" value="{{ID:id}}" name="id"/>
+			<p>
+				<input type="radio" name="option" value="everything" checked>
+				{{ST:delete_subcategories}}
+			</p>
+			<p>
+				<input type="radio" name="option" value="assign_to">
+				{{ST:move_subcategories}}
+				<select class="span2" name="new_parent">
+				{{ID:categories}}
+				</select>
+			</p>
+			<br/>
+			<div class="control-group">
+				<div class="controls">
+					<button type="submit" class="btn btn-danger" name="delete" value="1">{{ST:delete}}</button> <a class="btn" data-dismiss="modal">{{ST:cancel}}</a>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<!-- category.html:End -->
+

@@ -1,0 +1,56 @@
+<div class="row-fluid">
+<div class="span12">
+<h1>{{ST:create_achievement}}</h1>
+<br/>
+{{ID:alert}}
+<form class="form-horizontal" method="post" action="{{ID:base_url}}achievement_new.php" enctype="multipart/form-data">
+<fieldset>
+<div class="control-group">
+<label class="control-label">{{ST:name}}</label>
+<div class="controls">
+<input type="text" class="input-xlarge" name="name" value="{{ID:name}}"/>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label">{{ST:description}}</label>
+<div class="controls">
+<input type="text" class="input-xlarge" name="description" value="{{ID:description}}"/>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="desrciption">{{ST:type}}</label>
+<div class="controls">
+<select class="input-xlarge" name="type" id="type">
+<option value="">{{ST:select}}</option>
+<option {{ID:all_posts_selected}} value="all_posts">{{ST:all_posts}}</option>
+<option {{ID:started_threads_selected}} value="started_threads">{{ST:started_threads}}</option>
+<option {{ID:replies_selected}} value="replies">{{ST:replies}}</option>
+<option {{ID:membership_time_selected}} value="membership_time">{{ST:membership_time}}</option>
+<option {{ID:manual_assign_selected}} value="manual_assign">{{ST:manual_assign}}</option>
+</select>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label">{{ST:range}}</label>
+<div class="controls">
+{{ST:from}} <input type="text" class="span1 numeric_field" name="starting" value="{{ID:starting}}"/> {{ST:_to}} <input type="text" class="span1 numeric_field" name="ending" value="{{ID:ending}}"/>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="control-group">
+<label class="control-label" for="name">{{ST:icon}} (16x16: png,jpg,gif)</label>
+<div class="controls">
+<input type="file" name="icon"/>
+<p class="help-block">{{ID:current_icon}}</p>
+</div>
+</div>
+<div class="form-actions">
+<button type="submit" class="btn btn-info" name="submit" value="1">{{ST:submit}}</button>
+</div>
+</fieldset>
+</form>
+</div>
+</div>

@@ -1,0 +1,129 @@
+{
+    "ribbon": {
+        "fileTabMenu": {
+            "label": "File",
+            "commands": [
+                "save-as",
+                "close"
+            ]
+        },
+        "tabs": [{
+            "name": "Home",
+            "groups": [{
+                "width": "80",
+                "name": "Modelling",
+                "tools": [{
+					"type": "toolbar",
+					"showText": true,
+					"behavior": "normal",
+					"commands": [
+						"manage-dimensions"
+						
+						
+					]
+				},{
+                        "type": "toolbar",
+						"showText": true,
+                        "behavior": "normal",
+                        "commands": [
+                            "refresh-workview"
+                        ]
+                    }]
+            },{
+                "width": "auto",
+                "name": "Workview",
+                "tools": [{
+					"type": "toolbar",
+					"showText": true,
+					"behavior": "normal",
+					"commands": [
+						"data-validation"
+						
+					]
+				},{
+					"type": "toolbar",
+					"showText": true,
+					"behavior": "normal",
+					"commands": [
+						"set-instructions"
+					]
+				}]
+            },{
+                "width": "auto",
+                "name": "Misc",
+                "tools": [{
+					"type": "toolbar",
+					"showText": true,
+					"behavior": "normal",
+					"commands": [
+						
+						
+					]
+				}]
+            }]
+        },{
+            "name": "Visualise",
+            "groups": [{
+                "width": "80",
+                "name": "Display Settings",
+                "tools": [{
+					"type": "toolbar",
+					"showText": true,
+					"behavior": "normal",
+					"commands": [
+						"display-grid"
+						
+						
+					]
+				},{
+                        "type": "toolbar",
+						"showText": true,
+                        "behavior": "normal",
+                        "commands": [
+                            "display-chart"
+                        ]
+                    },{
+                        "type": "toolbar",
+						"showText": true,
+                        "behavior": "normal",
+                        "commands": [
+                            "display-both"
+                        ]
+                    }]
+            },{
+                "width": "180",
+                "name": "Chart Type",
+                "tools": [{
+					"type": "toolbar",
+					"showText": true,
+					"behavior": "normal",
+					"commands": [
+						"bar-chart",
+						"column-chart"
+						
+					]
+				},{
+					"type": "toolbar",
+					"showText": true,
+					"behavior": "normal",
+					"commands": [
+						"pie-chart",
+						"line-chart"
+					]
+				}]
+            },{
+                "width": "auto",
+                "name": "Misc",
+                "tools": [{
+					"type": "toolbar",
+					"showText": true,
+					"behavior": "normal",
+					"commands": [
+						
+						
+					]
+				}]
+            }]
+        }]
+    }
+}

@@ -1,0 +1,220 @@
+<div class="row-fluid">
+<div class="span12">
+<h1 style="float: left;">{{ST:settings}}</h1>
+<p style="float: right;"><a class="btn btn-info" href="{{ID:base_url}}post.php?type=question">{{ST:ask_a_question}}</a></p>
+<div style="clear: both;"></div>
+{{ID:alert}}
+</div>
+</div>
+<br/>
+<div class="row">
+<div class="span9">
+<form class="form-horizontal" action="settings.php" method="post">
+	
+	<div class="control-group">
+	<label class="control-label" for="input01">{{ST:forum_site_name}}<span style="color: red;">*</span></label>
+	<div class="controls">
+	<input class="input-xlarge" id="site_name" type="text" name="site_name" value="{{ID:site_name}}">
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label" for="input01">{{ST:site_default_meta_description}}</label>
+	<div class="controls">
+	<input class="input-xlarge" id="site_meta_description" type="text" name="site_meta_description" value="{{ID:site_meta_description}}">
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label"></label>
+	<div class="controls">
+	<label class="checkbox inline">
+	<input type="checkbox" value="1" name="make_forum_private"  {{ID:make_forum_private_state}}/> {{ST:make_forum_private}}
+	</label>
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label"></label>
+	<div class="controls">
+	<label class="checkbox inline">
+	<input type="checkbox" value="1" name="use_sef_urls"  {{ID:use_sef_urls_state}}/> {{ST:use_sef_urls}}
+	</label>
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label"></label>
+	<div class="controls">
+	<label class="checkbox inline">
+	<input type="checkbox" value="1" name="classic_home_page"  {{ID:classic_home_page_state}}/> {{ST:use_classic_home_page}}
+	</label>
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label" for="input01">{{ST:time_zone}}<span style="color: red;">*</span></label>
+	<div class="controls">
+	<input class="input-xlarge" id="time_zone" type="text" name="time_zone" value="{{ID:time_zone}}">
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label" for="input01">{{ST:theme}}</label>
+	<div class="controls">
+	<select class="input-xlarge" name="theme" id="theme">
+	<option {{ID:theme_selected_default}} value="default">Default</option>
+	<option {{ID:theme_selected_amelia}} value="amelia">Amelia</option>
+	<option {{ID:theme_selected_cerulean}} value="cerulean">Cerulean</option>
+	<option {{ID:theme_selected_cyborg}} value="cyborg">Cyborg</option>
+	<option {{ID:theme_selected_journal}} value="journal">Journal</option>
+	<option {{ID:theme_selected_readable}} value="readable">Readable</option>
+	<option {{ID:theme_selected_simplex}} value="simplex">Simplex</option>
+	<option {{ID:theme_selected_slate}} value="slate">Slate</option>
+	<option {{ID:theme_selected_spacelab}} value="spacelab">Spacelab</option>
+	<option {{ID:theme_selected_spruce}} value="spruce">Spruce</option>
+	<option {{ID:theme_selected_superhero}} value="superhero">Superhero</option>
+	<option {{ID:theme_selected_united}} value="united">United</option>
+	</select>
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label" for="input01">{{ST:rows_per_page}}<span style="color: red;">*</span></label>
+	<div class="controls">
+	<input class="input-xlarge" id="rows_per_page" type="text" name="rows_per_page" value="{{ID:rows_per_page}}">
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label" for="input01">{{ST:base_path}}<span style="color: red;">*</span></label>
+	<div class="controls">
+	<input class="input-xlarge" id="base_path" type="text" name="base_path" value="{{ID:base_path}}">
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label" for="input01">{{ST:forum_url}}<span style="color: red;">*</span></label>
+	<div class="controls">
+	<input class="input-xlarge" id="forum_url" type="text" name="forum_url" value="{{ID:forum_url}}">
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label" for="input01">{{ST:site_url}}<span style="color: red;">*</span></label>
+	<div class="controls">
+	<input class="input-xlarge" id="site_url" type="text" name="site_url" value="{{ID:site_url_option}}">
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label" for="input01">{{ST:recaptcha_public_key}}</label>
+	<div class="controls">
+	<input class="input-xlarge" id="recaptcha_public_key" type="password" name="recaptcha_public_key" value="{{ID:recaptcha_public_key}}">
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label" for="input01">{{ST:recaptcha_private_key}}</label>
+	<div class="controls">
+	<input class="input-xlarge" id="recaptcha_private_key" type="password" name="recaptcha_private_key" value="{{ID:recaptcha_private_key}}">
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label" for="input01">{{ST:facebook_app_id}}</label>
+	<div class="controls">
+	<input class="input-xlarge" id="facebook_app_id" type="password" name="facebook_app_id" value="{{ID:facebook_app_id}}">
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label" for="input01">{{ST:facebook_app_secret}}</label>
+	<div class="controls">
+	<input class="input-xlarge" id="facebook_app_secret" type="password" name="facebook_app_secret" value="{{ID:facebook_app_secret}}">
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label"></label>
+	<div class="controls">
+	<label class="checkbox inline">
+	<input type="checkbox" value="1" name="admin_approve_posts"  {{ID:admin_approve_posts_state}}/> {{ST:admin_approve_posts}}
+	</label>
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label"></label>
+	<div class="controls">
+	<label class="checkbox inline">
+	<input type="checkbox" value="1" name="email_admin_on_flag"  {{ID:email_admin_on_flag_state}}/> {{ST:email_admin_on_flag}}
+	</label>
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label"></label>
+	<div class="controls">
+	<label class="checkbox inline">
+	<input type="checkbox" value="1" name="email_admin_on_signup"  {{ID:email_admin_on_signup_state}}/> {{ST:email_admin_on_signup}}
+	</label>
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label"></label>
+	<div class="controls">
+	<label class="checkbox inline">
+	<input type="checkbox" value="1" name="email_admin_on_start_thread"  {{ID:email_admin_on_start_thread_state}}/> {{ST:email_admin_on_start_thread}}
+	</label>
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label"></label>
+	<div class="controls">
+	<label class="checkbox inline">
+	<input type="checkbox" value="1" name="approve_new_user"  {{ID:approve_new_user_state}}/> {{ST:approve_new_user}}
+	</label>
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label" for="input01">{{ST:words_to_filter}}</label>
+	<div class="controls">
+	<textarea class="input-xxlarge" id="bad_words" rows="3" name="bad_words">{{ID:bad_words}}</textarea>
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label"></label>
+	<div class="controls">
+	<label class="checkbox inline">
+	<input type="checkbox" value="1" name="multi_lingual"  {{ID:multi_lingual_state}}/> {{ST:is_multi_lingual}}
+	</label>
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label" for="input01">{{ST:primary_language}}</label>
+	<div class="controls">
+	<input class="span4" id="primary_language" type="text" name="primary_language" value="{{ID:primary_language}}">
+	<span class="help-block">{{ST:primary_language_help}}</span>
+	</div>
+	</div>
+	
+	<div class="control-group">
+	<label class="control-label" for="input01">{{ST:other_languages}}</label>
+	<div class="controls">
+	<input class="span4" id="other_languages" type="text" name="other_languages" value="{{ID:other_languages}}">
+	<span class="help-block">{{ST:other_languages_help}}</span>
+	</div>
+	</div>
+	
+	<div class="form-actions">
+		<button type="submit" class="btn btn-info" value="1" name="submit">{{ST:save_changes}}</button>
+	</div>
+</form>      
+</div>
+</div>

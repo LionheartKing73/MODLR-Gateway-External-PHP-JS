@@ -1,0 +1,21 @@
+<div class="row-fluid">
+<div class="span12">
+<h1>{{ST:forgot_password}}</h1>
+<br/>
+{{ID:alert}}
+<form class="form-horizontal" method="post" action="{{ID:base_url}}forgot.php">
+<fieldset>
+<div class="control-group">
+<label class="control-label">{{ST:username_or_email}}</label>
+<div class="controls">
+<input type="text" class="input-xlarge" name="username_or_email" value="{{ID:username_or_email}}"/>
+<p class="help-block"></p>
+</div>
+</div>
+<div class="form-actions">
+<button type="submit" class="btn btn-info" name="submit" value="1">{{ST:submit}}</button> <a class="btn" href="signin.php">{{ST:signin}}</a>
+</div>
+</fieldset>
+</form>
+</div>
+</div>
